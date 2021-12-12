@@ -12,26 +12,26 @@ public class OrderedArrayList {
     _data = new ArrayList<Integer> (10);
   }
 
-  // public String toString() {
-  //   String hold = "{";
-  //   for ( int i = 0; i < _data.length; i++ ) {
-  //
-  //   }
-  // }
+  public String toString() {
+    String hold = "{";
+    for ( int i = 0; i < _data.size(); i++ ) {
+      hold = hold + _data.get(i) + ",";
+    }
+    hold = hold + "}";
+    return hold;
+  }
 
-  // public Integer remove( int i )
-  // {
-  //
-  // }
+  public Integer remove( int i ) {
+    return _data.remove(i);
+  }
 
   public int size() {
     return _data.size();
   }
 
-  // public Integer get( int i )
-  // {
-  //
-  // }
+  public Integer get( int i ) {
+    return _data.get(i);
+  }
 
   // inserts newVal at the appropriate index
   // maintains ascending order of elements
