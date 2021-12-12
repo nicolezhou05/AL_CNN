@@ -1,3 +1,7 @@
-### Lab02: Well Al B. Sorted
+# Lab02: Well Al B. Sorted
 
-### AL_CNN: Nada Hameed + Ray, Nicole Zhou + Duck, Corina Chen + Binktop
+## AL_CNN: Nada Hameed + Ray, Nicole Zhou + Duck, Corina Chen + Binktop
+
+### AlTester
+
+###OrderedArrayList
