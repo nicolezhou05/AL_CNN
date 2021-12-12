@@ -1,5 +1,6 @@
 QCC:
 - ArrayList does not have a 'length' method but does have a 'size' method
 - ArrayList's '.get' method finds the item at the index you're searching for
+- Integer converts a primitive to an object and vice versa
 
 DISCOS:
