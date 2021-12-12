@@ -21,24 +21,16 @@ public class OrderedArrayList {
     return hold;
   }
 
-  // public Integer remove( int i ) {
-  //   for ( int j = 0; j < _data.size(); j++ ) {
-  //     if
-  //   }
-  // }
+  public Integer remove( int i ) {
+    return _data.remove(i);
+  }
 
   public int size() {
     return _data.size();
   }
 
   public Integer get( int i ) {
-    int retNum = 0;
-    for ( int j = 0; j < _data.size(); j++ ) {
-      if (_data.get(j) == i ) {
-        retNum = j;
-      }
-    }
-    return retNum;
+    return _data.get(i);
   }
 
   // inserts newVal at the appropriate index
