@@ -21,25 +21,34 @@ public class OrderedArrayList {
     return hold;
   }
 
-  public Integer remove( int i ) {
-    return _data.remove(i);
-  }
+  // public Integer remove( int i ) {
+  //   for ( int j = 0; j < _data.size(); j++ ) {
+  //     if
+  //   }
+  // }
 
   public int size() {
     return _data.size();
   }
 
   public Integer get( int i ) {
-    return _data.get(i);
+    int retNum = 0;
+    for ( int j = 0; j < _data.size(); j++ ) {
+      if (_data.get(j) == i ) {
+        retNum = j;
+      }
+    }
+    return retNum;
   }
 
   // inserts newVal at the appropriate index
   // maintains ascending order of elements
   // uses a linear search to find appropriate index
-  // public void addLinear(Integer newVal)
-  // {
-  //
-  // }
+  public void addLinear(Integer newVal) {
+    if (newVal == 0 ) {
+
+    }
+  }
 
   // inserts newVal at the appropriate index
   // maintains ascending order of elements
