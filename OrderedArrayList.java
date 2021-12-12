@@ -57,10 +57,27 @@ public class OrderedArrayList {
   // inserts newVal at the appropriate index
   // maintains ascending order of elements
   // uses a binary search to find appropriate index
-  public void addBinary(Integer newVal)
-  {
-
+  public void addBinary(Integer newVal) {
+    int left = 0;
+    int right = size() - 1;
+    while (left < right ) {
+      int mid = left + (right - 1 ) / 2;
+      if (_data.get(mid) == newVal) {
+        _data.add(newVal);
+      }
+      else if (_data.get(mid) < newVal ) {
+        left = mid + 1;
+      }
+      else {
+        right = mid - 1;
+      }
+    }
   }
+
+  // public void midRec(Integer newVal, int size) {
+  //   int left = 0;
+  //   int right =
+  // }
 
   // main method solely for testing purposes
   public static void main( String[] args )
