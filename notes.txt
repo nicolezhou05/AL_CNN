@@ -1,3 +1,4 @@
 QCC:
+- ArrayList does not have a 'length' method but does have a 'size' method
 
 DISCOS:
