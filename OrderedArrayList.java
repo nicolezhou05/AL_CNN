@@ -15,8 +15,11 @@ public class OrderedArrayList {
   public String toString() {
     String hold = "{";
     for ( int i = 0; i < _data.size(); i++ ) {
-      hold = hold + _data.get(i) + ",";
+      hold += _data.get(i) + ",";
     }
+    if ( hold.length() > 1 )
+      //shave off trailing comma
+      hold = hold.substring( 0, hold.length()-1 );
     hold = hold + "}";
     return hold;
   }
@@ -36,21 +39,28 @@ public class OrderedArrayList {
   // inserts newVal at the appropriate index
   // maintains ascending order of elements
   // uses a linear search to find appropriate index
-  public void addLinear(Integer newVal) {
-    for (int x = 0; x < _data.size(); x++ ) {
-      if ( newVal >= _data.get(x) && newVal <= _data.get(x + 1) ) {
-        _data.add(x, newVal);
+  public void addLinear(Integer newVal)
+  {
+    if (size() == 0){
+      _data.add(newVal);
+    } else {
+      for (int i = 0; i < size(); i++){
+        if (newVal <= _data.get(i)){
+          _data.add(i, newVal);
+          return;
+        }
       }
+      _data.add(newVal);
     }
   }
 
   // inserts newVal at the appropriate index
   // maintains ascending order of elements
   // uses a binary search to find appropriate index
-  // public void addBinary(Integer newVal)
-  // {
-  //
-  // }
+  public void addBinary(Integer newVal)
+  {
+
+  }
 
   // main method solely for testing purposes
   public static void main( String[] args )
