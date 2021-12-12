@@ -37,8 +37,10 @@ public class OrderedArrayList {
   // maintains ascending order of elements
   // uses a linear search to find appropriate index
   public void addLinear(Integer newVal) {
-    if (newVal == 0 ) {
-
+    for (int x = 0; x < _data.size(); x++ ) {
+      if ( newVal >= _data.get(x) && newVal <= _data.get(x + 1) ) {
+        _data.add(x, newVal);
+      }
     }
   }
 
@@ -55,13 +57,13 @@ public class OrderedArrayList {
   {
 
     OrderedArrayList Franz = new OrderedArrayList();
-    /*-----v-------move-me-down-----------------v--------
 
     // testing linear search
     for( int i = 0; i < 15; i++ )
       Franz.addLinear( (int)( 50 * Math.random() ) );
     System.out.println( Franz );
 
+    /*-----v-------move-me-down-----------------v--------
     // testing binary search
     Franz = new OrderedArrayList();
     for( int i = 0; i < 15; i++ )
