@@ -35,7 +35,8 @@ public class OrderedArrayList {
   {
     if (size() == 0){
       _data.add(newVal);
-    } else {
+    }
+    else {
       for (int i = 0; i < size(); i++){
         if (newVal <= _data.get(i)){
           _data.add(i, newVal);
@@ -52,24 +53,26 @@ public class OrderedArrayList {
   public void addBinary(Integer newVal) {
     int left = 0;
     int right = size() - 1;
-    while (left < right ) {
-      int mid = left + (right - 1 ) / 2;
-      if (_data.get(mid) == newVal) {
-        _data.add(newVal);
+    if ( size() == 0 ) {
+      _data.add(newVal);
+    }
+    else {
+      while (left < right ) {
+        int mid = ( left + right ) / 2;
+        if (_data.get(mid) == newVal) {
+          _data.add(mid, newVal);
+          break;
+        }
+        else if (_data.get(mid) < newVal ) {
+          left = mid + 1;
+        }
+        else {
+          right = mid - 1;
+        }
       }
-      else if (_data.get(mid) < newVal ) {
-        left = mid + 1;
-      }
-      else {
-        right = mid - 1;
-      }
+      _data.add(newVal);
     }
   }
-
-  // public void midRec(Integer newVal, int size) {
-  //   int left = 0;
-  //   int right =
-  // }
 
   // main method solely for testing purposes
   public static void main( String[] args )
@@ -82,12 +85,12 @@ public class OrderedArrayList {
       Franz.addLinear( (int)( 50 * Math.random() ) );
     System.out.println( Franz );
 
-    /*-----v-------move-me-down-----------------v--------
     // testing binary search
     Franz = new OrderedArrayList();
     for( int i = 0; i < 15; i++ )
       Franz.addBinary( (int)( 50 * Math.random() ) );
     System.out.println( Franz );
+    /*-----v-------move-me-down-----------------v--------
       =====^====================================^=========*/
 
   }//end main()
