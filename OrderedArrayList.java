@@ -13,15 +13,7 @@ public class OrderedArrayList {
   }
 
   public String toString() {
-    String hold = "{";
-    for ( int i = 0; i < _data.size(); i++ ) {
-      hold += _data.get(i) + ",";
-    }
-    if ( hold.length() > 1 )
-      //shave off trailing comma
-      hold = hold.substring( 0, hold.length()-1 );
-    hold = hold + "}";
-    return hold;
+    return _data.toString();
   }
 
   public Integer remove( int i ) {
