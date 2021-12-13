@@ -3,6 +3,7 @@
 ## TNPG: CNN (Nada Hameed + Ray, Nicole Zhou + Duck, Corina Chen + Binktop)
 
 ### AlTester
+Default constructor populates the array with 23 random ints. It also contains a method to check if an array is sorted or not (returns true if the array is sorted, false otherwise).
 
 ### OrderedArrayList
 - `toString` : displays information in a specific way
