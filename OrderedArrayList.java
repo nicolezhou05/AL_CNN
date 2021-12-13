@@ -43,21 +43,21 @@ public class OrderedArrayList
   // uses a linear search to find appropriate index
   public void addLinear(Integer newVal)
   {
-    boolean inserted = false;
+    //boolean inserted = false;
     if (size() == 0){
       _data.add(newVal);
     } else {
       for (int i = 0; i < size(); i++){
         if (newVal <= _data.get(i)){
           _data.add(i, newVal);
-          inserted = true;
-          break;
-          //return; can include instead of using boolean inserted
+          //inserted = true;
+          //break;
+          return; //can include instead of using boolean inserted
         }
       }
-      if (inserted == false){
+      //if (inserted == false){
       _data.add(newVal);
-    }
+    //}
     }
   }
 
