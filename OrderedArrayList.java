@@ -34,6 +34,10 @@ public class OrderedArrayList
     return _data.get(i);
   }
 
+  public void add(Integer newVal) {
+      _data.add(newVal);
+  }
+
   // inserts newVal at the appropriate index
   // maintains ascending order of elements
   // uses a linear search to find appropriate index
