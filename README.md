@@ -6,7 +6,7 @@
 It contains the methods `isSorted` that check if an array is sorted or not (returns true if the array is sorted, false otherwise).
 
 ### OrderedArrayList
-- `toString` : displays information in a specific way
+- `toString` : displays the array
 - `remove` : using the given index, it removes the element of that index in the array
 - `size` : returns the length of the array that displays the meaningful data
 - `get` : returns the value of the element at the given index in the array
