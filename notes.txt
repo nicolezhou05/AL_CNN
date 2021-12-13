@@ -2,6 +2,8 @@ DISCOS:
 - ArrayList does not have a 'length' method but does have a 'size' method
 - ArrayList's '.get' method finds the item at the index you're searching for
 - Integer converts a primitive to an object and vice versa
+- Linear search: goes through each element one by one to find where to add a new value
+- Binary search: checks middle value and compares it to new value, and then if newVal is smaller or larger than the middle value, looks at the first or second half of the ArrayList respectively and takes the middle value of that half, and so on until there is only one element in the part of the ArrayList that is being looked at, and then newVal is compared to this final element and added either before or after
 
 QCCS:
 - in addLinear, we can either return nothing (return;) or create a boolean inserted, and continue the loop until the newVal has been inserted
