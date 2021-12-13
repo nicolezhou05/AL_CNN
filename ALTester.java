@@ -14,5 +14,23 @@ public class ALTester {
     return test.toString();
   }
 
+  public boolean isSorted() {
+    for (int i = 0; i < test.size(); i++ ) {
+      if (!(test.get(i) <= test.get(i+1))) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  public static void main(String[] args) {
+    ALTester test0 = new ALTester();
+    System.out.println(test0);
+    test0.isSorted();
+    System.out.println(test0.isSorted());
+
+    
+  }
+
 
 }
