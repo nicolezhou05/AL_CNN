@@ -11,7 +11,7 @@ public class ALTester {
   }
 
   public static boolean isSorted(OrderedArrayList test) {
-    for (int i = 0; i < test.size(); i++ ) {
+    for (int i = 0; i < test.size() - 1; i++ ) {
       if (!(test.get(i) <= test.get(i+1))) {
         return false;
       }
@@ -20,7 +20,7 @@ public class ALTester {
   }
 
   public static boolean isSorted(ArrayList<Integer> test) {
-    for (int i = 0; i < test.size(); i++ ) {
+    for (int i = 0; i < test.size() - 1; i++ ) {
       if (!(test.get(i) <= test.get(i+1))) {
         return false;
       }
