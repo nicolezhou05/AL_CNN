@@ -1,6 +1,8 @@
-QCC:
+DISCOS:
 - ArrayList does not have a 'length' method but does have a 'size' method
 - ArrayList's '.get' method finds the item at the index you're searching for
 - Integer converts a primitive to an object and vice versa
 
-DISCOS:
+QCCS:
+- in addLinear, we can either return nothing (return;) or create a boolean inserted, and continue the loop until the newVal has been inserted
+  -> return; is more efficient so that's what we employed
